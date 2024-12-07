@@ -3,7 +3,7 @@ import string
 
 # Function to generate a secure password with validation and full randomness
 def generate_password(length=32, include_upper=True, include_lower=True, include_digits=True, include_special=True):
-    if length < 8:
+    if length < 12:
         raise ValueError("Password length must be at least 8 characters.")
 
     # Define character sets
@@ -29,7 +29,7 @@ def generate_password(length=32, include_upper=True, include_lower=True, include
 
 # Generate and display a password
 try:
-    password = generate_password(length=16, include_upper=True, include_lower=True, include_digits=True, include_special=True)
+    password = generate_password(length=12, include_upper=True, include_lower=True, include_digits=True, include_special=True)
     print(f"Generated Password: {password}")
 except ValueError as e:
     print(f"Error: {e}")
